@@ -19,6 +19,8 @@ Just use `pip` to install the library
     pip install rpi-TM1638
   
 or clone the latest version on [Github](https://github.com/thilaire/rpi-TM1638) 
+Then
+   sudo python setup.py install
    
 ## Example
 Suppose you have two TM1638 boards, that share DataIO on GPIO19 and the clock on GPIO13. They have their STB plugged on GPIO 6 and 26. 

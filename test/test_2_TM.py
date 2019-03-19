@@ -1,6 +1,13 @@
 # coding=utf-8
 from time import sleep
 from rpi_TM1638 import TMBoards
+import socket
+import select
+import sys
+
+#GPIO6 STP pin31
+#GPI13 CLK pin33
+#GPI19 DIO pin35
 
 # my GPIO settings (two TM1638 boards connected on GPIO19 and GPIO13 for DataIO and Clock; and on GPIO06 and GPIO26 for the STB)
 DIO = 19
