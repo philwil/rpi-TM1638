@@ -32,6 +32,8 @@ TM.segments[3,1] = True     # turn on the segment #1 of the 7-segment number 3
 #TM.segments[8] = '01234567'
 #TM.leds = (True, False, True)   # set the three first leds
 
+sval = 12.34
+
 print __name__
 if __name__ == "__main__":
     NODE,HOST,PORT = "LEDS1","pine64-001",5541
@@ -78,6 +80,8 @@ if __name__ == "__main__":
 
         read_sockets,write_socket, error_socket =\
                           select.select(sockets_list,[],[],1)
+        TM.segments[4] = str(sval)
+        sval = sval+0.02
         print "select done"
         for socks in read_sockets:
             if socks == server:
@@ -111,7 +115,7 @@ if __name__ == "__main__":
                 print x
             
         # 	b=TM.getData(1)
-        TM.segments[0] = ''.join("%02d"%x for x in a)
+        #TM.segments[0] = ''.join("%02d"%x for x in a)
         # 	TM.segments[8] = ''.join("%02d" % x for x in b)
         #sleep(0.1)
 
