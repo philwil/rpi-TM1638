@@ -48,16 +48,16 @@ if __name__ == "__main__":
     
     msg = "set " + NODE + ":led1 off\n"
     server.send(msg)
-    print msg
+    #print msg
     msg = "set " + NODE + ":led2 off\n"
     server.send(msg)
-    print msg
+    #print msg
     msg = "set " + NODE + ":led3 off\n"
     server.send(msg)
-    print msg
+    #print msg
     msg = "set " + NODE + ":led4 off\n"
     server.send(msg)
-    print msg
+    #print msg
     
 
 
